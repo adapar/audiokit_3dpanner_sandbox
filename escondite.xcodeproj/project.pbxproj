@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DB86B62A58E25D9BF0C3109 /* libPods-escondite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E98E57AD4D41B61294D511 /* libPods-escondite.a */; };
 		C5DA320B1DB3D9C2007DD744 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DA320A1DB3D9C2007DD744 /* AppDelegate.swift */; };
 		C5DA320D1DB3D9C2007DD744 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DA320C1DB3D9C2007DD744 /* ViewController.swift */; };
 		C5DA32101DB3D9C2007DD744 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5DA320E1DB3D9C2007DD744 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04FEADE2012A400254C6D9D3 /* Pods-escondite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-escondite.release.xcconfig"; path = "Pods/Target Support Files/Pods-escondite/Pods-escondite.release.xcconfig"; sourceTree = "<group>"; };
+		37C3072F5AE5785E900AD656 /* Pods-escondite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-escondite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-escondite/Pods-escondite.debug.xcconfig"; sourceTree = "<group>"; };
+		C0E98E57AD4D41B61294D511 /* libPods-escondite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-escondite.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5DA32071DB3D9C2007DD744 /* escondite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = escondite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5DA320A1DB3D9C2007DD744 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5DA320C1DB3D9C2007DD744 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DB86B62A58E25D9BF0C3109 /* libPods-escondite.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01ECD79489165908AEEFD7E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0E98E57AD4D41B61294D511 /* libPods-escondite.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		814D1D02C93466E64E9D5594 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				37C3072F5AE5785E900AD656 /* Pods-escondite.debug.xcconfig */,
+				04FEADE2012A400254C6D9D3 /* Pods-escondite.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C5DA31FE1DB3D9C1007DD744 = {
 			isa = PBXGroup;
 			children = (
 				C5DA32091DB3D9C2007DD744 /* escondite */,
 				C5DA32081DB3D9C2007DD744 /* Products */,
+				814D1D02C93466E64E9D5594 /* Pods */,
+				01ECD79489165908AEEFD7E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5DA32191DB3D9C2007DD744 /* Build configuration list for PBXNativeTarget "escondite" */;
 			buildPhases = (
+				D7FB5BD2A4C6B9D0689239BF /* [CP] Check Pods Manifest.lock */,
 				C5DA32031DB3D9C1007DD744 /* Sources */,
 				C5DA32041DB3D9C1007DD744 /* Frameworks */,
 				C5DA32051DB3D9C1007DD744 /* Resources */,
+				184825D226E4C67E0EA4587D /* [CP] Embed Pods Frameworks */,
+				5CFA5A7E16FF665B1906BBA9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		184825D226E4C67E0EA4587D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-escondite/Pods-escondite-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CFA5A7E16FF665B1906BBA9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-escondite/Pods-escondite-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7FB5BD2A4C6B9D0689239BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C5DA32031DB3D9C1007DD744 /* Sources */ = {
@@ -257,12 +332,13 @@
 		};
 		C5DA321A1DB3D9C2007DD744 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37C3072F5AE5785E900AD656 /* Pods-escondite.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = F36LF7X844;
 				INFOPLIST_FILE = escondite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.adapar.escondite;
+				PRODUCT_BUNDLE_IDENTIFIER = net.adapar.escondite.swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -270,12 +346,13 @@
 		};
 		C5DA321B1DB3D9C2007DD744 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04FEADE2012A400254C6D9D3 /* Pods-escondite.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = F36LF7X844;
 				INFOPLIST_FILE = escondite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.adapar.escondite;
+				PRODUCT_BUNDLE_IDENTIFIER = net.adapar.escondite.swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -300,6 +377,7 @@
 				C5DA321B1DB3D9C2007DD744 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
