@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     var currentY = 0.0
     var currentZ = 0.0
     
+    var mixer = AKMixer()
+    var microphone = AKMicrophone()
     var oscillator = AKOscillator()
     var panner: AK3DPanner?
     
@@ -31,8 +33,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        panner = AK3DPanner(oscillator, x: currentX, y: currentY, z: currentZ)
+        mixer.connect(oscillator)
+        mixer.connect(microphone)
         
+        panner = AK3DPanner(mixer, x: currentX, y: currentY, z: currentZ)
+
         AudioKit.output = panner
         AudioKit.start()
     }
